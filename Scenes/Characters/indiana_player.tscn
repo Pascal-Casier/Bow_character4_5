@@ -1,0 +1,303 @@
+[gd_scene load_steps=52 format=3 uid="uid://dkpgksdq7sakq"]
+
+[ext_resource type="PackedScene" uid="uid://cq81tv56pr68m" path="res://assets/blender/IndianaJones_armatureTpose.glb" id="1_52xjw"]
+[ext_resource type="Animation" uid="uid://dlrqegt8tj6ky" path="res://assets/animations/FallALandToRunForward.res" id="2_ddj1i"]
+[ext_resource type="Animation" uid="uid://cfx7jtf1m4ltt" path="res://assets/animations/fallALandtoStand.res" id="3_xn4ir"]
+[ext_resource type="Animation" uid="uid://cpqbo6d8gputq" path="res://assets/animations/fallBLandToStand.res" id="4_3hkq8"]
+[ext_resource type="Animation" uid="uid://c810lr2cfeopy" path="res://assets/animations/FallToRoll.res" id="5_5y66i"]
+[ext_resource type="Animation" uid="uid://beek0dyflmnbi" path="res://assets/animations/floating.res" id="6_4kiud"]
+[ext_resource type="Animation" uid="uid://44ouquciyqut" path="res://assets/animations/SandingIdleBow3.res" id="7_si831"]
+[ext_resource type="Animation" uid="uid://h2ur8fe67g4c" path="res://assets/animations/standingAimIdle01.res" id="8_i8k57"]
+[ext_resource type="Animation" uid="uid://d3jech5ehtxtl" path="res://assets/animations/StandingAimOverdraw.res" id="9_0y4iq"]
+[ext_resource type="Animation" uid="uid://def6wp7l4x52j" path="res://assets/animations/StandingAimRecoil.res" id="10_erwdb"]
+[ext_resource type="Animation" uid="uid://fd44xt5ot8qn" path="res://assets/animations/StandingAimWalkBack.res" id="11_b57kx"]
+[ext_resource type="Animation" uid="uid://be18boi1gmpea" path="res://assets/animations/StandingAimWalkForward.res" id="12_tkt8m"]
+[ext_resource type="Animation" uid="uid://7b133cu7ymn4" path="res://assets/animations/StandingAimWalkLeft.res" id="13_nd1k7"]
+[ext_resource type="Animation" uid="uid://bav77q7yl85gb" path="res://assets/animations/StandingAimWalkRight.res" id="14_frxg2"]
+[ext_resource type="Animation" uid="uid://cbgov1u3pkn7o" path="res://assets/animations/StandingBlock.res" id="15_r46l5"]
+[ext_resource type="Animation" uid="uid://bf2ufe574drxt" path="res://assets/animations/StandingDeathForwards01.res" id="16_1bop5"]
+[ext_resource type="Animation" uid="uid://bridsbk8qevkf" path="res://assets/animations/StandingDethBackwards01.res" id="17_j480u"]
+[ext_resource type="Animation" uid="uid://nlmetuygia0y" path="res://assets/animations/StandingDisarmBow.res" id="18_5koy3"]
+[ext_resource type="Animation" uid="uid://c3wl717onb86t" path="res://assets/animations/StandingDiveForward.res" id="19_f1idi"]
+[ext_resource type="Animation" uid="uid://wn36hepewfl3" path="res://assets/animations/StandingDodgeBak.res" id="20_76wqp"]
+[ext_resource type="Animation" uid="uid://b5nx3kyjos1f3" path="res://assets/animations/StandingDodgeFront.res" id="21_hf12n"]
+[ext_resource type="Animation" uid="uid://nimt500cvn7n" path="res://assets/animations/StandingDodgeLeft.res" id="22_s5tys"]
+[ext_resource type="Animation" uid="uid://ca1qb1vpanvrs" path="res://assets/animations/StandingDodgeRight.res" id="23_8hqbo"]
+[ext_resource type="Animation" uid="uid://xqdkq8oxqkha" path="res://assets/animations/StandingDrawArrow.res" id="24_68j8j"]
+[ext_resource type="Animation" uid="uid://dctnn2dipkto8" path="res://assets/animations/StandingEquipBow.res" id="25_u4x5n"]
+[ext_resource type="Animation" uid="uid://2tvovaywphos" path="res://assets/animations/StandingIdleBow02.res" id="26_yyisk"]
+[ext_resource type="Animation" uid="uid://ffaoj1xfb48w" path="res://assets/animations/StandingIdleBow.res" id="27_u7dhl"]
+[ext_resource type="Animation" uid="uid://b0hj0udqeljpo" path="res://assets/animations/StandingMeleeKick.res" id="28_g3aew"]
+[ext_resource type="Animation" uid="uid://bgyeslekluyy0" path="res://assets/animations/StandingMeleePunch.res" id="29_idy56"]
+[ext_resource type="Animation" uid="uid://irl3lku314ui" path="res://assets/animations/StandingReactSmallFromFront.res" id="30_xucmu"]
+[ext_resource type="Animation" uid="uid://spw4462p03vb" path="res://assets/animations/StandingReactSmallFromHead.res" id="31_qesu0"]
+[ext_resource type="Animation" uid="uid://btyddgod617tr" path="res://assets/animations/StandingRunBack.res" id="32_gdca4"]
+[ext_resource type="Animation" uid="uid://uimpwddghqmj" path="res://assets/animations/StandingRunForward.res" id="33_7ene8"]
+[ext_resource type="Animation" uid="uid://b7whpwt5jje78" path="res://assets/animations/StandingRunForwardStop.res" id="34_5sv3v"]
+[ext_resource type="Animation" uid="uid://mgnjja1qtbbh" path="res://assets/animations/StandingRunLeft.res" id="35_5pcuv"]
+[ext_resource type="Animation" uid="uid://0b76lous5nxw" path="res://assets/animations/StandingRunRight.res" id="36_de8u3"]
+[ext_resource type="Animation" uid="uid://cb30bdl8yt845" path="res://assets/animations/StandingTurn90Left.res" id="37_pvqx1"]
+[ext_resource type="Animation" uid="uid://cp3lsr6nfy5wf" path="res://assets/animations/StandingTurn90Right.res" id="38_et0ds"]
+[ext_resource type="Animation" uid="uid://dm2061evgjflr" path="res://assets/animations/StandingWalkBack.res" id="39_23t7u"]
+[ext_resource type="Animation" uid="uid://3hhx5bic7o1e" path="res://assets/animations/StandingWalkForward.res" id="40_1h202"]
+[ext_resource type="Animation" uid="uid://b5wl1ac8qmoxp" path="res://assets/animations/StandingWalkLeft.res" id="41_4uxag"]
+[ext_resource type="Animation" uid="uid://3bacfmb8wlpg" path="res://assets/animations/StandingWalkRight.res" id="42_y7nsv"]
+[ext_resource type="Animation" uid="uid://p4mqbcrirbek" path="res://assets/animations/UnarmedIdle01.res" id="43_2wm6h"]
+[ext_resource type="Animation" uid="uid://bblycar5n2xqf" path="res://assets/animations/walking_forward_root.res" id="44_cjcx6"]
+
+[sub_resource type="Animation" id="Animation_ya36s"]
+resource_name = "Armature|mixamo_com|Layer0"
+length = 0.06666667
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("%GeneralSkeleton:Hips")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.00026896273, 1.0045627, 0.008400785)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("%GeneralSkeleton:Hips")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 2.2739172e-05, -6.739388e-05, 0.001984314, 0.999998)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("%GeneralSkeleton:Spine")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -2.2679567e-05, 6.739324e-05, -0.0019843143, 0.99999803)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("%GeneralSkeleton:LeftShoulder")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.49992725, -0.50007284, -0.49992722, 0.50007284)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("%GeneralSkeleton:LeftUpperArm")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.017017215, 0.9998551, -0.00038418174, -1.5050173e-05)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("%GeneralSkeleton:LeftLowerArm")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.01717777, -0.7069919, -0.014099554, 0.70687234)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("%GeneralSkeleton:LeftHand")
+tracks/6/interp = 0
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, -0.01943825, 0.7064223, -0.0043873154, 0.7075099)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("%GeneralSkeleton:mixamorig_LeftHandIndex1")
+tracks/7/interp = 0
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.12310177, 0.0082974285, 0.21847732, 0.9680106)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("%GeneralSkeleton:LeftIndexProximal")
+tracks/8/interp = 0
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, -0.1462798, -0.023923159, -0.31947404, 0.93593097)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("%GeneralSkeleton:LeftIndexIntermediate")
+tracks/9/interp = 0
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0.058065414, 0.0077195317, 0.14916204, 0.9870763)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("%GeneralSkeleton:RightShoulder")
+tracks/10/interp = 0
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0.49992642, -0.50007373, -0.4999264, -0.50007373)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("%GeneralSkeleton:RightUpperArm")
+tracks/11/interp = 0
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, -0.0018855035, 0.99999815, -0.00038574636, -1.6987324e-06)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("%GeneralSkeleton:RightLowerArm")
+tracks/12/interp = 0
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, -0.023443932, 0.70677036, 0.02035912, 0.7067612)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("%GeneralSkeleton:RightHand")
+tracks/13/interp = 0
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, 0.034762885, -0.7079077, 0.010379382, 0.7053726)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("%GeneralSkeleton:mixamorig_RightHandIndex1")
+tracks/14/interp = 0
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, -0.010510564, -0.0017083138, -0.032537296, 0.9994139)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("%GeneralSkeleton:RightIndexProximal")
+tracks/15/interp = 0
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, -0.018340707, 0.00023728609, 0.025618434, 0.9995035)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("%GeneralSkeleton:RightIndexIntermediate")
+tracks/16/interp = 0
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, 0.063474774, -0.0006529242, -0.01650238, 0.99784684)
+tracks/17/type = "rotation_3d"
+tracks/17/imported = true
+tracks/17/enabled = true
+tracks/17/path = NodePath("%GeneralSkeleton:LeftUpperLeg")
+tracks/17/interp = 0
+tracks/17/loop_wrap = true
+tracks/17/keys = PackedFloat32Array(0, 1, -0.0018595937, 0.031287562, 0.99736816, 0.06537782)
+tracks/18/type = "rotation_3d"
+tracks/18/imported = true
+tracks/18/enabled = true
+tracks/18/path = NodePath("%GeneralSkeleton:LeftLowerLeg")
+tracks/18/interp = 0
+tracks/18/loop_wrap = true
+tracks/18/keys = PackedFloat32Array(0, 1, 4.2315573e-05, 0.9968852, -0.078129426, 0.010763426)
+tracks/19/type = "rotation_3d"
+tracks/19/imported = true
+tracks/19/enabled = true
+tracks/19/path = NodePath("%GeneralSkeleton:LeftFoot")
+tracks/19/interp = 0
+tracks/19/loop_wrap = true
+tracks/19/keys = PackedFloat32Array(0, 1, 0.04216216, 0.6713222, -0.7384367, -0.047536965)
+tracks/20/type = "rotation_3d"
+tracks/20/imported = true
+tracks/20/enabled = true
+tracks/20/path = NodePath("%GeneralSkeleton:RightUpperLeg")
+tracks/20/interp = 0
+tracks/20/loop_wrap = true
+tracks/20/keys = PackedFloat32Array(0, 1, -0.0029927767, -0.04429669, -0.9971299, 0.061324768)
+tracks/21/type = "rotation_3d"
+tracks/21/imported = true
+tracks/21/enabled = true
+tracks/21/path = NodePath("%GeneralSkeleton:RightLowerLeg")
+tracks/21/interp = 0
+tracks/21/loop_wrap = true
+tracks/21/keys = PackedFloat32Array(0, 1, -0.00014303625, 0.9922058, -0.12343058, -0.01710464)
+tracks/22/type = "rotation_3d"
+tracks/22/imported = true
+tracks/22/enabled = true
+tracks/22/path = NodePath("%GeneralSkeleton:RightFoot")
+tracks/22/interp = 0
+tracks/22/loop_wrap = true
+tracks/22/keys = PackedFloat32Array(0, 1, -0.040260717, 0.64667505, -0.7601029, 0.049339727)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n0hyy"]
+_data = {
+&"Armature|mixamo_com|Layer0": SubResource("Animation_ya36s"),
+&"FallALandToRunForward": ExtResource("2_ddj1i"),
+&"FallToRoll": ExtResource("5_5y66i"),
+&"SandingIdleBow3": ExtResource("7_si831"),
+&"StandingAimOverdraw": ExtResource("9_0y4iq"),
+&"StandingAimRecoil": ExtResource("10_erwdb"),
+&"StandingAimWalkBack": ExtResource("11_b57kx"),
+&"StandingAimWalkForward": ExtResource("12_tkt8m"),
+&"StandingAimWalkLeft": ExtResource("13_nd1k7"),
+&"StandingAimWalkRight": ExtResource("14_frxg2"),
+&"StandingBlock": ExtResource("15_r46l5"),
+&"StandingDeathForwards01": ExtResource("16_1bop5"),
+&"StandingDethBackwards01": ExtResource("17_j480u"),
+&"StandingDisarmBow": ExtResource("18_5koy3"),
+&"StandingDiveForward": ExtResource("19_f1idi"),
+&"StandingDodgeBak": ExtResource("20_76wqp"),
+&"StandingDodgeFront": ExtResource("21_hf12n"),
+&"StandingDodgeLeft": ExtResource("22_s5tys"),
+&"StandingDodgeRight": ExtResource("23_8hqbo"),
+&"StandingDrawArrow": ExtResource("24_68j8j"),
+&"StandingEquipBow": ExtResource("25_u4x5n"),
+&"StandingIdleBow": ExtResource("27_u7dhl"),
+&"StandingIdleBow02": ExtResource("26_yyisk"),
+&"StandingMeleeKick": ExtResource("28_g3aew"),
+&"StandingMeleePunch": ExtResource("29_idy56"),
+&"StandingReactSmallFromFront": ExtResource("30_xucmu"),
+&"StandingReactSmallFromHead": ExtResource("31_qesu0"),
+&"StandingRunBack": ExtResource("32_gdca4"),
+&"StandingRunForward": ExtResource("33_7ene8"),
+&"StandingRunForwardStop": ExtResource("34_5sv3v"),
+&"StandingRunLeft": ExtResource("35_5pcuv"),
+&"StandingRunRight": ExtResource("36_de8u3"),
+&"StandingTurn90Left": ExtResource("37_pvqx1"),
+&"StandingTurn90Right": ExtResource("38_et0ds"),
+&"StandingWalkBack": ExtResource("39_23t7u"),
+&"StandingWalkForward": ExtResource("40_1h202"),
+&"StandingWalkLeft": ExtResource("41_4uxag"),
+&"StandingWalkRight": ExtResource("42_y7nsv"),
+&"UnarmedIdle01": ExtResource("43_2wm6h"),
+&"fallALandtoStand": ExtResource("3_xn4ir"),
+&"fallBLandToStand": ExtResource("4_3hkq8"),
+&"floating": ExtResource("6_4kiud"),
+&"standingAimIdle01": ExtResource("8_i8k57"),
+&"walking_forward_root": ExtResource("44_cjcx6")
+}
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tfhk5"]
+radius = 0.2709961
+height = 1.7841797
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_52xjw"]
+animation = &"StandingRunForward"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ddj1i"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xn4ir"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_3hkq8"]
+states/StandingRunForward/node = SubResource("AnimationNodeAnimation_52xjw")
+states/StandingRunForward/position = Vector2(361.33334, 90)
+transitions = ["Start", "StandingRunForward", SubResource("AnimationNodeStateMachineTransition_ddj1i"), "StandingRunForward", "End", SubResource("AnimationNodeStateMachineTransition_xn4ir")]
+
+[node name="IndianaPlayer" type="CharacterBody3D"]
+
+[node name="IndianaJones_armatureTpose" parent="." instance=ExtResource("1_52xjw")]
+
+[node name="AnimationPlayer" parent="IndianaJones_armatureTpose" index="1"]
+libraries = {
+&"": SubResource("AnimationLibrary_n0hyy")
+}
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.89208984, 0)
+shape = SubResource("CapsuleShape3D_tfhk5")
+
+[node name="AnimationMisc" type="Node3D" parent="."]
+
+[node name="AnimationTree" type="AnimationTree" parent="AnimationMisc"]
+root_node = NodePath("../../IndianaJones_armatureTpose")
+root_motion_track = NodePath("%GeneralSkeleton:Hips")
+tree_root = SubResource("AnimationNodeStateMachine_3hkq8")
+anim_player = NodePath("../../IndianaJones_armatureTpose/AnimationPlayer")
+
+[node name="RootMotionView" type="RootMotionView" parent="AnimationMisc"]
+animation_path = NodePath("../AnimationTree")
+
+[editable path="IndianaJones_armatureTpose"]
