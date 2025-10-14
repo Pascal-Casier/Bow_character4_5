@@ -6,6 +6,7 @@ extends CharacterBody3D
 @export var FALL : LimboState
 @export var limbo_state : LimboHSM
 @onready var animation_tree = $AnimationMisc/AnimationTree
+@onready var camera: PhantomCamera3D = $CameraManager/MainCamera
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
