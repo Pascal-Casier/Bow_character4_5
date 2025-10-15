@@ -8,6 +8,9 @@ extends CharacterBody3D
 @onready var animation_tree = $AnimationMisc/AnimationTree
 @onready var camera: PhantomCamera3D = $CameraManager/MainCamera
 
+const SPEED := 3.5
+const ROTATION_SPEED := 7.0
+
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	_initialize_state_machine()
@@ -32,9 +35,23 @@ func _setup_state_transitions() -> void:
 func change_state(state_name:LimboState, state : String)-> void:
 	state_name.dispatch(state)
 	
+func set_velocities() -> void:
+	var s = -SPEED * animation_tree.get_root_motion_position().z / get_physics_process_delta_time()
+	var player_forward = -transform.basis.z
+	velocity.x = player_forward.x * s
+	velocity.z = player_forward.z * s
+
+func rotation_based_on_camera(input_dir:Vector2) -> void:
+	var camera_forward = -camera.global_transform.basis.z
+	var camera_right = camera.global_transform.basis.x
+	var move_direction = (camera_forward * input_dir.y) + (camera_right * input_dir.x)
+	move_direction = move_direction.normalized()
+	var target_rotation = atan2(move_direction.x, move_direction.z)
+	if rotation.y != target_rotation:
+		rotation.y = lerp_angle(rotation.y, target_rotation, ROTATION_SPEED * get_process_delta_time())
 	
-	
-	
+func move_character() -> void:
+	move_and_slide()
 	
 	
 	
