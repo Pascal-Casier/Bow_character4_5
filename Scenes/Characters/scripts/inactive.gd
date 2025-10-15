@@ -9,7 +9,6 @@ func _enter() -> void:
 	agent.animation_tree.state_transition("INACTIVE")
 	print_debug("entered inactive state")
 	
-
 func _exit() -> void:
 	print_debug("exited inactive state")	
 	
@@ -38,6 +37,7 @@ func _update(delta: float) -> void:
 			tween = create_tween().bind_node(self)
 			var time = movement + 1
 			tween.tween_property(self, "movement", -1, time).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUINT)
+		agent.set_velocities()
 		agent.set_velocities()
 		
 	agent.animation_tree.inactive_movement(movement)
