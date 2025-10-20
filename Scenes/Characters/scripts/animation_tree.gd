@@ -25,4 +25,15 @@ func set_state_animation_direction(node_name:String, direction:int) -> void:
 func movement(blend_position_value : Vector2) -> void:
 	current_blend_position = current_blend_position.move_toward(blend_position_value, blend_speed * get_process_delta_time())
 	set("parameters/ACTIVE/movement/blend_position", current_blend_position)
+
+func sub_state_transition(path: String, sub_state_name:String):
+	var _state_machine_transition = get("parameters/ACTIVE/" + path + "/playback")
+	if _state_machine_transition:
+		_state_machine_transition.travel(sub_state_name)
+		
+func set_transition_value(path : String, value : String): 
+	set("parameters/ACTIVE/" + path + "/transition_request", value)
+	
+func set_oneshot_active(path:String):
+	set("parameters/ACTIVE/" + path + "/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 	

@@ -6,6 +6,7 @@ extends Node3D
 
 @export var min_pitch : float = -89.9
 @export var max_pitch : float = 50.0
+
 @export var min_yaw : float = 0.0
 @export var max_yaw : float = 360.0
 

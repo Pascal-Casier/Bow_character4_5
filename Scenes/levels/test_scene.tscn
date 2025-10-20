@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5ebhje5mvep"]
+[gd_scene load_steps=7 format=3 uid="uid://c5ebhje5mvep"]
 
 [ext_resource type="PackedScene" uid="uid://bu74mh3w11qc7" path="res://Scenes/Characters/Player.tscn" id="1_3wsqt"]
+[ext_resource type="Texture2D" uid="uid://iasxwltqaqm4" path="res://assets/textures/Rocks/FLATSTONES.png" id="1_kieqm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kieqm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -15,6 +16,10 @@ sky = SubResource("Sky_0esr3")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0esr3"]
+albedo_texture = ExtResource("1_kieqm")
+uv1_triplanar = true
+
 [node name="testScene" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -25,8 +30,9 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4960938, -0.551886, -0.45571756)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3797607, -0.52380985, -0.957541)
+material_override = SubResource("StandardMaterial3D_0esr3")
 use_collision = true
-size = Vector3(11.853516, 1, 11.786194)
+size = Vector3(22.665283, 1.0561523, 19.148697)
 
 [node name="Indy" parent="." instance=ExtResource("1_3wsqt")]

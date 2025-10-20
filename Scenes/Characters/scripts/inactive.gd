@@ -1,8 +1,7 @@
 extends LimboState
 
 var movement := -1.0
-#const SPEED := 1.2
-#const ROTATION_SPEED = 4.0
+
 var tween = false
 
 func _enter() -> void:
