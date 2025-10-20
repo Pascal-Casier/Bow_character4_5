@@ -15,13 +15,6 @@ func _update(delta: float) -> void:
 	var input_dir := Input.get_vector("a", "d", "s", "w").normalized()
 	if input_dir.length() > 0:
 		agent.rotation_based_on_camera(input_dir)
-		#var camera_forward = -agent.camera.global_transform.basis.z
-		#var camera_right = agent.camera.global_transform.basis.x
-		#var move_direction = (camera_forward * input_dir.y) + (camera_right * input_dir.x)
-		#move_direction = move_direction.normalized()
-		#var target_rotation = atan2(move_direction.x, move_direction.z)
-		#if agent.rotation.y != target_rotation:
-			#agent.rotation.y = lerp_angle(agent.rotation.y, target_rotation, ROTATION_SPEED * get_process_delta_time())
 		if tween:
 			tween.kill()
 			tween = null
@@ -50,7 +43,7 @@ func should_run():
 	return false
 
 func _change() -> void:
-	if Input.is_action_just_pressed("lclick") or Input.is_action_just_pressed("rclick") or Input.is_action_just_pressed("e"):
+	if (Input.is_action_just_pressed("lclick") or Input.is_action_just_pressed("rclick") or Input.is_action_just_pressed("e")) and agent.animation_tree.can_switch_state():
 		agent.animation_tree.set_state_animation_direction("de_equip bow", 0)
-		agent.change_state(self, "to_active")
+		agent.animation_tree.state_transition("ACTIVE")
 	

@@ -53,4 +53,26 @@ func rotation_based_on_camera(input_dir : Vector2) -> void:
 func move_character():
 	move_and_slide()
 	
+func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "standing aim recoil":
+		change_state(AIM, "to_active")
+	elif anim_name == "standing equip bow":
+		change_state(get_current_state(), get_next_state_event())
+		
+func get_current_state():
+	return limbo_state.get_active_state()
 	
+func get_next_state_event():
+	if get_current_state() == INACTIVE:
+		return "to_active"
+	return "to_inactive"
+	
+func get_state_value():
+	return get_current_state().name
+
+func move():
+	var root_motion = animation_tree.get_root_motion_position()
+	var horizontal = (transform.basis.get_rotation_quaternion().normalized() * root_motion)
+	velocity.x = horizontal.x / get_process_delta_time() * 1.5
+	velocity.z = horizontal.z / get_process_delta_time() * 1.5
+	move_character()

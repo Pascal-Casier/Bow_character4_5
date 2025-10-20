@@ -6,6 +6,8 @@ const ANIMATION_LENGTH_RUN := 0.766
 var current_blend_position := Vector2.ZERO
 var blend_speed := 10.0 # transition speed between animations
 
+@onready var player = $"../../"
+ 
 func _ready() -> void:
 	self.active = true
 	
@@ -36,4 +38,15 @@ func set_transition_value(path : String, value : String):
 	
 func set_oneshot_active(path:String):
 	set("parameters/ACTIVE/" + path + "/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
-	
+
+func can_switch_state():
+	var _current_state = player.get_state_value()
+	match _current_state:
+		"ACTIVE":
+			if get("parameters/playback").get_current_node() != _current_state:
+				return false
+			var _dodge = get("parameters/ACTIVE/dodge os/active")
+			var _aim = get("parameters/ACTIVE/aim os/active")
+			return not(_dodge or _aim)
+		_: 
+			return true
