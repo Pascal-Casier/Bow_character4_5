@@ -3,8 +3,10 @@ extends LimboState
 var movement := -1.0
 
 var tween = false
+var is_falling := false
 
 func _enter() -> void:
+	is_falling = false
 	agent.animation_tree.state_transition("INACTIVE")
 	print_debug("entered inactive state")
 	
@@ -33,8 +35,8 @@ func _update(delta: float) -> void:
 		agent.set_velocities()
 		
 	agent.animation_tree.inactive_movement(movement)
-	agent.move_character()
 	_change()
+	_fall()
 		
 
 func should_run():
@@ -47,3 +49,11 @@ func _change() -> void:
 		agent.animation_tree.set_state_animation_direction("de_equip bow", 0)
 		agent.animation_tree.state_transition("ACTIVE")
 	
+func _fall():
+	if not agent.is_on_floor() and not is_falling:
+		is_falling = true
+		await get_tree().create_timer(0.2).timeout
+		if not agent.is_on_floor():
+			agent.change_state(self, "to_fall")
+		else:
+			is_falling = false

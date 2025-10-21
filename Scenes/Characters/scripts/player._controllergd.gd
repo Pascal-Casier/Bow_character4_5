@@ -10,6 +10,7 @@ extends CharacterBody3D
 
 const SPEED := 1.5
 const ROTATION_SPEED := 7.0
+const GRAVITY := 10.0
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -75,4 +76,14 @@ func move():
 	var horizontal = (transform.basis.get_rotation_quaternion().normalized() * root_motion)
 	velocity.x = horizontal.x / get_process_delta_time() * 1.5
 	velocity.z = horizontal.z / get_process_delta_time() * 1.5
+	
+
+func get_previous_state() -> String:
+	return limbo_state.get_previous_active_state().name
+
+func _physics_process(delta: float) -> void:
+	if not is_on_floor():
+		velocity.y = clamp(velocity.y - GRAVITY * delta, -GRAVITY, GRAVITY)
+	else:
+		velocity.y = 0
 	move_character()

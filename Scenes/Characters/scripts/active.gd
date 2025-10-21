@@ -1,8 +1,9 @@
 extends LimboState
 
-
+var is_falling := false
 # Called when the node enters the scene tree for the first time.
 func _enter() -> void:
+	is_falling = false
 	agent.animation_tree.state_transition("ACTIVE")
 	print_debug("enter active state")
 
@@ -19,6 +20,7 @@ func _update(delta:float) -> void:
 	agent.move()
 	_change()
 	_dodge(input_dir)
+	_fall()
 	
 	
 func _change() -> void:
@@ -47,3 +49,12 @@ func _get_dodge_value(dodge_value : Vector2):
 			return "dodge left"
 		_: 
 			return "dodge front"
+
+func _fall():
+	if not agent.is_on_floor() and not is_falling:
+		is_falling = true
+		await get_tree().create_timer(0.2).timeout
+		if not agent.is_on_floor():
+			agent.change_state(self, "to_fall")
+		else:
+			is_falling = false

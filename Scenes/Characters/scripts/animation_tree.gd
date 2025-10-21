@@ -50,3 +50,8 @@ func can_switch_state():
 			return not(_dodge or _aim)
 		_: 
 			return true
+
+func direct_sub_state_transition(state_name : String, anim_name : String):
+	var _playback = get("parameters/" + state_name + "/playback")
+	if _playback:
+		_playback.travel(anim_name)
