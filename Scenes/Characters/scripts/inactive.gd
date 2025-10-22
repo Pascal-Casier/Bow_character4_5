@@ -8,6 +8,7 @@ var is_falling := false
 func _enter() -> void:
 	is_falling = false
 	agent.animation_tree.state_transition("INACTIVE")
+	agent.camera_manager.change_camera(agent.camera_manager.camera_states.WALK)
 	print_debug("entered inactive state")
 	
 func _exit() -> void:
@@ -41,7 +42,9 @@ func _update(delta: float) -> void:
 
 func should_run():
 	if Input.is_action_pressed("shift"):
+		agent.camera_manager.change_camera(agent.camera_manager.camera_states.RUN)
 		return true
+	agent.camera_manager.change_camera(agent.camera_manager.camera_states.WALK)
 	return false
 
 func _change() -> void:

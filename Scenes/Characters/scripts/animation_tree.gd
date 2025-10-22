@@ -55,3 +55,12 @@ func direct_sub_state_transition(state_name : String, anim_name : String):
 	var _playback = get("parameters/" + state_name + "/playback")
 	if _playback:
 		_playback.travel(anim_name)
+
+func reset_movement():
+	current_blend_position = Vector2.ZERO
+	set("parameters/ACTIVE/movement/blend_position", current_blend_position)
+	set_oneshot_abort("dodge os")
+	set_oneshot_abort("aim os")
+	
+func set_oneshot_abort(path:String):
+	set("parameters/ACTIVE/" + path + "/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT)

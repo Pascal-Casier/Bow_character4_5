@@ -7,6 +7,7 @@ extends CharacterBody3D
 @export var limbo_state : LimboHSM
 @onready var animation_tree = $AnimationMisc/AnimationTree
 @onready var camera: PhantomCamera3D = $CameraManager/MainCamera
+@onready var camera_manager = $CameraManager
 
 const SPEED := 1.5
 const ROTATION_SPEED := 7.0

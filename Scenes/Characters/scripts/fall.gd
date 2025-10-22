@@ -6,6 +6,10 @@ func _enter() -> void:
 	print_debug( "fall state entered")
 	var next_state = get_travel_state()
 	agent.animation_tree.state_transition(next_state)
+	reset()
+	
+func reset():
+	agent.animation_tree.reset_movement()
 	
 func _exit() -> void:
 	print_debug( "fall state exited")

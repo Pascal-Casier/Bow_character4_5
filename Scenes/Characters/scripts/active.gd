@@ -5,6 +5,7 @@ var is_falling := false
 func _enter() -> void:
 	is_falling = false
 	agent.animation_tree.state_transition("ACTIVE")
+	agent.camera_manager.change_camera(agent.camera_manager.camera_states.ACTIVE)
 	print_debug("enter active state")
 
 func _exit() -> void:

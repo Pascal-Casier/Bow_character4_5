@@ -6,6 +6,7 @@ func _enter():
 	is_falling = false
 	print_debug("entered aim state")
 	agent.animation_tree.set_oneshot_active("aim os")
+	agent.camera_manager.change_camera(agent.camera_manager.camera_states.FIRE)
 	
 func _exit():
 	print_debug("exited aim state")
@@ -29,6 +30,7 @@ func _fall():
 		is_falling = true
 		await get_tree().create_timer(0.2).timeout
 		if not agent.is_on_floor():
+			agent.camera_manager.change_camera(agent.camera_manager.camera_states.ACTIVE)
 			agent.change_state(self, "to_fall")
 		else:
 			is_falling = false
